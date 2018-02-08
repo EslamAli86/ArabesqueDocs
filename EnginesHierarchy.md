@@ -4,11 +4,9 @@ This document describes the hierarchy diagram of the computation engines (Master
 
 ## Master Engine
 
-![ ](./resources/11.png  "Master Engine CD")
-
 <p align="center"> 
-<img src="./resources/11.png">
-</p
+<img src="./resources/1.png" alt="Master Engine Class Diagram">
+</p>
 
 The master engine is the main engine running on the driver node and reponsible for the following:
 
@@ -30,7 +28,10 @@ The master engine is the main engine running on the driver node and reponsible f
 ***
 
 ## Worker Engines
-<center>![ ](./resources/2.png  "Worker Engine CD") </center>
+<p align="center"> 
+<img src="./resources/2.png" alt="Worker Engine Class Diagram">
+</p>
+
 
 Each engine is identified by a partition id and associated with a single thread that corresponds to a partition in Spark computation model. Each worker has the llifetime of one super stepcomputation and responsible for the following:
 
