@@ -4,6 +4,7 @@ This document describes the hierarchy diagram of the computation engines (Master
 
 ## Master Engine
 
+![ ](./resources/11.png  "Master Engine CD")
 <center>![ ](./resources/11.png  "Master Engine CD")</center>
 
 The master engine is the main engine running on the driver node and reponsible for the following:
