@@ -5,7 +5,7 @@ This document describes the hierarchy diagram of the computation engines (Master
 ## Master Engine
 
 <p align="center"> 
-<img src="./resources/1.png" alt="Master Engine Class Diagram">
+<img src="./resources/Engines/master_general.png" alt="Master Engine Class Diagram">
 </p>
 
 The master engine is the main engine running on the driver node and reponsible for the following:
@@ -29,7 +29,7 @@ The master engine is the main engine running on the driver node and reponsible f
 
 ## Worker Engines
 <p align="center"> 
-<img src="./resources/2.png" alt="Worker Engine Class Diagram">
+<img src="./resources/Engines/worker_general.png" alt="Worker Engine Class Diagram">
 </p>
 
 
