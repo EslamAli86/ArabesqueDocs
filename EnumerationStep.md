@@ -3,7 +3,7 @@
 This document describes the hierarchy diagram of the EnumerationStep
 
 <p align="center"> 
-<img src="./resources/StorageReader/EnumerationStep_details.png" alt="Master Engine Class Diagram">
+<img src="./resources/ClassDiag/StorageReader/EnumerationStep_details.png" alt="Master Engine Class Diagram">
 </p>
 
 <!--

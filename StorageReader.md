@@ -5,7 +5,7 @@ This document describes the hierarchy diagram of the computation engines (Master
 ## Master Engine
 
 <p align="center"> 
-<img src="./resources/Engines/master_general.png" alt="Master Engine Class Diagram">
+<img src="./resources/ClassDiag/Engines/master_general.png" alt="Master Engine Class Diagram">
 </p>
 
 [Click here to view the class diagram in details(e.g. fields and)](./resources/Engines/master_details.png)
