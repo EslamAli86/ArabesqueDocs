@@ -4,7 +4,7 @@ This document describes the internals of the ODAG data structure.
 
 
 <p align="center"> 
-<img src="./resources/ClassDiag/ODAG/ODAGHierarchy.jpg" alt="Hierarchy diagram of ODAG" width="50%" height="50%">
+<img src="./resources/ClassDiag/ODAG/ODAGHierarchy.jpg" alt="Hierarchy diagram of ODAG" width="75%" height="75%">
 </p>
 
 
