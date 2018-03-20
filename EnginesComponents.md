@@ -18,7 +18,7 @@ This document describes the architecture and interaction of the computation engi
 4. Waits till all engines finish hteir computing their partitions. Then retrieve and aggrgate the new ODAGs in order to send them to the new engines in the next step.
 
 <br>
-<font size="4">Each engine performs the following steps:</font>
+<font size="10">Each engine performs the following steps:</font>
 
 1. Determines which enumerations/embeddings to read from each ODAG. This set of enumerations is generated from an ODAG using a load balancing algorithm mentioned in the paper in section 5.3
 2. For each embedding read, the engine expands it generating a set of new embeddings
