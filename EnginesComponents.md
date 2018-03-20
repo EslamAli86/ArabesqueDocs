@@ -5,7 +5,7 @@ This document describes the architecture and interaction of the computation engi
 
 
 <p align="center"> 
-<img src="./resources/ClassDiag/Engines/ODAGs_Engines_relations.jpg" alt="Computation engines component diagram">
+<img src="./resources/ClassDiag/Engines/ODAGs_Engines_relations.jpg" alt="Computation engines component diagram" width="75%" height="75%">
 </p>
 
 
