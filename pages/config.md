@@ -32,14 +32,14 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 
 
 ###  Arabesque:
-| Parameter | Describtion | Default value |
+| Parameter | Describtion &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Default value |
 | ------------------- | -------------- | :--------------: |
 | **`execution_engine`** | The main interface for the spark master engines | no default value and must be provided |
 | **`input_graph_path`** | The main interface for the spark master engines | `main.graph` |
 | **`input_graph_subgraphs_path`** | The main interface for the spark master engines | `None` |
 | **`input_graph_local`** | The main interface for the spark master engines | `false` |
 | **`output_path`** | The main interface for the spark master engines | `Output` |
-| **`output_active`** | The main interface for the spark master engines | `true` |
+| **`output_active`** | Tells Arabesque whether to to write the results (discovered embeddings and/or pattenrs) into `output_path` | `true` |
 | **`computation`** | The main interface for the spark master engines | `io.arabesque.computation.ComputationContainer` |
 | **`master_computation`** | The main interface for the spark master engines | `io.arabesque.computation.MasterComputation` |
 | **`optimizations`** | This parameter is optional | no default value |
@@ -60,10 +60,10 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 ###  QFrag:
 | Parameter | Describtion | Default value |
 | ------------------- | -------------- | :--------------: |
-| **`search_input_graph_path`** | bla bla bla | `null` |
-| **`search_query_graph_path`** | bla bla bla | `null` |
-| **`search_output_path`** | bla bla bla | `output_search` |
-| **`search_output_active`** | bla bla bla | `true` |
+| **`search_input_graph_path`** | Determines the location/path of the data graph. This graph is where QFrag will search for matches of the `search_query_graph_path`  | `null` |
+| **`search_query_graph_path`** | Determines the location/path of the query/pattern graph | `null` |
+| **`search_output_path`** | Tells QFrag where to write the resulting matches if `search_output_active` is set to true | `output_search` |
+| **`search_output_active`** | Tells QFrag whether to to write the resulting matches into `search_output_path` | `true` |
 | **`search_injective`** | bla bla bla | `false` |
 | **`search_outliers_pct`** | bla bla bla | `0.001` |
 | **`search_outliers_min_matches`** | bla bla bla | `100` |
