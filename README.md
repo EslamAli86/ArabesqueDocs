@@ -17,3 +17,5 @@
 	+ [Master/Worker engines interaction](./pages/EnginesInteractionSeqDiag.md)
 	+ [Get next embedding](./pages/GetNextEmbeddingSeqDiag.md)
 	+ [Read/Expand/Add](./pages/ReadExpandAddNewEmbeddingSeqDiag.md)
+
++ [Configuration](./pages/config.md)
