@@ -24,6 +24,7 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 ###  Common paramters:
 | Parameter | Describtion | Default value |
 | ------------------- | -------------- | :--------------: |
+| 				 | 									 | 		 |
 | **`system_type`** | determines the system: either **`mining`** to run Arabesque or **`search`** to run QFrag | `mining` |
 | **`log_level`** | determines the log level of the application, you can choose one of the [log4j logging levels]() | `info` |
 
@@ -32,7 +33,7 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 
 
 ###  Arabesque:
-| Parameter | Describtion &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Default value |
+| Parameter | Describtion | Default value |
 | ------------------- | -------------- | :--------------: |
 | **`execution_engine`** | The main interface for the spark master engines | no default value and must be provided |
 | **`input_graph_path`** | The main interface for the spark master engines | `main.graph` |
