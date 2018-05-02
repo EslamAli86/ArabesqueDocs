@@ -1,13 +1,13 @@
 # Configuration paramters
 
-This document describes the paramaters used to configure Arabesque and QFrag. It also describes the perameters used to configure the spark cluster
+This document describes the paramaters used to configure Arabesque and QFrag. It also describes the parameters used to configure a spark cluster
 
 
 ***
 
 
-###  Cluster:
-| Parameter | Describtion | Default value |
+##  Cluster:
+| Parameter | Description | Default value |
 | ------------------- | -------------- | :--------------: |
 | **`spark_master`** | This property determines the deploy mode of the application. [Allowed values](https://spark.apache.org/docs/latest/submitting-applications.html#master-urls) are the same as in any Spark application. | `local[*]` |
 | **`num_workers`** | Number of Spark executors requested by the application. | `1` |
@@ -21,8 +21,8 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 ***
 
 
-###  Common paramters:
-| Parameter | Describtion | Default value |
+##  Common paramters:
+| Parameter | Description | Default value |
 | ------------------- | -------------- | :--------------: |
 | **`system_type`** | Determines the system: either **`mining`** to run Arabesque or **`search`** to run QFrag | `mining` |
 | **`log_level`** | Determines the log level of the application, you can choose one of the [log4j logging levels]() | `info` |
@@ -31,8 +31,8 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 ***
 
 
-###  Arabesque:
-| Parameter | Describtion | Default value |
+##  Arabesque:
+| Parameter | Description | Default value |
 | ------------------- | -------------- | :--------------: |
 | **`execution_engine`** | Determines whether Arabesque will run on top of Giraph or Spark. User must determines a value, either `giraph` or `spark` | No default value |
 | **`input_graph_path`** | Determines the location/path of the input main graph | `main.graph` |
@@ -40,8 +40,8 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 | **`input_graph_local`** | Determines whether the data graph is stored on the local storage or on hdfs | `false` |
 | **`output_path`** | Tells Arabesque where to write the results (patterns and/or embeddings) if `output_active` is set to true | `Output` |
 | **`output_active`** | Tells Arabesque whether to write the results (patterns and/or embeddings) into `output_path` or not | `true` |
-| **`computation`** | Specify the mining algorithm computation class. According to the current implemented algorithms available under the `gmlib` package, this parameter can take one of the following values:<ul><li>`io.arabesque.gmlib.clique.CliqueComputation`</li><li>`io.arabesque.gmlib.fsm.FSMComputation`</li><li>`io.arabesque.gmlib.motif.MotifComputation`</li></ul> | `io.arabesque.computation`<br>`.ComputationContainer` |
-| **`master_computation`** | Specify the class of the master computation that would be executed before the end of each super step. Example: io.arabesque.computation.FSMMasterComputation prints the frequent patterns or halts the computation if no patterns survived the fiteration step | `io.arabesque.computation`<br>`.MasterComputation` |
+| **`computation`** | Specify the mining algorithm computation class. According to the current implemented algorithms available under the `gmlib` package, this parameter can take one of the following values:<ul><li>`io.arabesque.gmlib.clique.CliqueComputation`</li><li>`io.arabesque.gmlib.fsm.FSMComputation`</li><li>`io.arabesque.gmlib.motif.MotifComputation`</li></ul> | `io.arabesque`<br>`.computation`<br>`.ComputationContainer` |
+| **`master_computation`** | Specify the class of the master computation that would be executed before the end of each super step. Example: io.arabesque.computation.FSMMasterComputation prints the frequent patterns or halts the computation if no patterns survived the fiteration step | `io.arabesque`<br>`.computation`<br>`.MasterComputation` |
 | **`arabesque.clique.maxsize`** | Arabesque will continue mining all cliques with size <= `arabesque.clique.maxsize` | `4` |
 | **`arabesque.motif.maxsize`** | Arabesque will continue mining/counting all motifs with size <= `arabesque.motif.maxsize` | `4` |
 | **`arabesque.fsm.maxsize`** | Arabesque will continue mining till it reaches patterns with size =  `arabesque.fsm.maxsize` and support >= `arabesque.fsm.support` | `4` |
@@ -56,8 +56,8 @@ This document describes the paramaters used to configure Arabesque and QFrag. It
 ***
 
 
-###  QFrag:
-| Parameter | Describtion | Default value |
+##  QFrag:
+| Parameter | Description | Default value |
 | ------------------- | -------------- | :--------------: |
 | **`search_input_graph_path`** | Determines the location/path of the data graph. This graph is where QFrag will search for <br>matches of the `search_query_graph_path`  | `null` |
 | **`search_query_graph_path`** | Determines the location/path of the query/pattern graph | `null` |
