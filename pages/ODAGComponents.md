@@ -15,7 +15,7 @@ The most outter skin of the ODAG is the **ODAGStash**. Which stores a list of OD
 2. A **Pattern** object as the key that the corresponding odag follows
  
 Each **ODAG** object encapsulates
-1. An intenal storage of type **AbstractDomainStorage** that comes in many variations (Please refer to the class diagram of [AbstractDomianStorage](./resources/ClassDiag/ODAG/general.png))
+1. An intenal storage of type **AbstractDomainStorage** that comes in many variations (Please refer to the class diagram of [AbstractDomianStorage](../pages/DomainStorage.md))
 2. **Pattern** which this ODAG follows
  
 A **DomainStorage** is the core storage of an ODAG where the list of embeddings is compressed. 

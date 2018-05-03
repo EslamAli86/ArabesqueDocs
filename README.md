@@ -7,8 +7,8 @@
 + ODAG
 	+ [components](./pages/ODAGComponents.md)
 	+ classes
-		+ [ODAG](./pages/ODAGClassDiagram.md)
-		+ [Storage](./pages/Storage.md)
+		+ [DomainStorage](./pages/DomainStorage.md)
+		+ [DomainEntry](./pages/DomainEntry.md)
 		+ [StorageReader](./pages/StorageReader.md)
 		+ [EnumerationStep](./pages/EnumerationStep.md)
 
