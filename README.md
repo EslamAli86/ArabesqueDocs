@@ -6,9 +6,11 @@
 
 + ODAG
 	+ [components](./pages/ODAGComponents.md)
-	+ [classes](./pages/ODAGClassDiagram.md)
-		+ [ODAG](./pages/EnginesClassDiagram.md)
-		+ [StorageReader](./pages/EnginesClassDiagram.md)
+	+ classes
+		+ [ODAG](./pages/ODAGClassDiagram.md)
+		+ [Storage](./pages/Storage.md)
+		+ [StorageReader](./pages/StorageReader.md)
+		+ [EnumerationStep](./pages/EnumerationStep.md)
 
 + Reports
 	+ [classes](./pages/ReportsClassDiagram.md)

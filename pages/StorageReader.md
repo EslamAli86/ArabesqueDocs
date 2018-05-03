@@ -1,22 +1,27 @@
-# Class diagrams of computation engines
+# Class diagram of Storage Reader
 
-This document describes the hierarchy diagram of the computation engines (Master/Workes)
+Each reader is associated with a thread/partition and responsible for enumerating/reading embeddings stored in an ODAG stoage. Those embeddings will go through a pipeline of filteration and expansion steps.
 
-## Master Engine
+Every reader decides which parts of the ODAG to enumerate based on its partition ID and other parameters. That allows the workloads of the enumeration and expansion work be more load-balanced between the readers.
+
+## Readers hierarchichy
 
 <p align="center"> 
-<img src="../resources/ClassDiag/Engines/master_general.png" alt="Master Engine Class Diagram">
+<img src="../resources/ClassDiag/StorageReader/StorageReader_general.png" alt="ODAG storage readers class diagram">
 </p>
 
-[Click here to view the class diagram in details(e.g. fields and)](./resources/Engines/master_details.png)
+[Click here to view the class diagram in details (e.g. fields and methods)](../resources/ClassDiag/StorageReader/StorageReader_details.png)
 
-The master engine is the main engine running on the driver node and reponsible for the following:
+Readers could be classified into two main types:
 
- + Initializing the accumulators and the embeddings storage data structure (ODAG or Simple)
- + For each super step:
-	 + Aggregating the resulting embeddings and accumulators from the previous super step
-	 + Building worker engines, broadcast them the configurations and the list of aggregated ODAGs
-	 + Waiting for all engines to finalize their computations and aggregate the resulting embeddings and accumulators
+ + **`SinglePatternReader`**: responsible for reading embeddings from SinglePatternODAGs. Single pattern readers could also be classified into three sub-types:
+ 	 + **Simple**: responsible for reading embeddings from ODAGs that compress the embeddings in more compact format than the regular ODAGs.<br>
+	 + **Generic**: responsible for reading embeddings from ODAGs that compress them using generic data structures from the [java.util](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) and [java.util.concurrent](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/package-summary.html) frameworks.<br>
+	 + **Primitive**: responsible for reading embeddings from ODAGs that compress them using primitive data structures from the [koloboke](https://koloboke.com/) framework. Which allows the primitive ODAGs to be more efficient in terms of memory utilization and runtime.<br>
+
+ + **`MutliPatternsReader`**: responsible for reading embeddings from `MultiPatternODAG` (A `MultiPatternODAG` allows an ODAG to store embeddings that follow more than a single pattern in the same storage). Those `MultiPatternODAG` could also be classified into **Primitive** and **Generic** similar to those under the `SinglePattenrODAG`.
+
+<!--
 
 #### Classes describtions:
 | Class/Interface | Describtion|
@@ -27,29 +32,4 @@ The master engine is the main engine running on the driver node and reponsible f
 | ODAGMasterEngineSP | The same as its parent but compresses the embeddings that follow the same pattern into a single ODAG (One-to-one correspondence) |
 | ODAGMasterEngineMP | The same as its parent but each ODAG compresses the embeddings of more than one pattern (OneODAG-to-MultiplePatterns correspondence) |
 
-***
-
-## Worker Engines
-<p align="center"> 
-<img src="../resources/Engines/worker_general.png" alt="Worker Engine Class Diagram">
-</p>
-
-
-Each engine is identified by a partition id and associated with a single thread that corresponds to a partition in Spark computation model. Each worker has the llifetime of one super stepcomputation and responsible for the following:
-
-+ Receiving a list of ODAGs at the beginning of each super step
-+ Iterating over the embeddings stored inside each ODAG and expands each embedding
-+ Aggregating the embeddings that result from the exapnsion and computation processes
-+ Accumulating the number of processed/generated/output embeddings
-+ Sends the aggregations and the accumulators stats to the master engine 
-
-<!---
-#### Classes describtions:
-| Class/Interface | Describtion|
-| ------------------- | -------------- |
-| SparkEngine | |
-| SparkEmbeddingEngine | |
-| ODAGEngine | |
-| ODAGEngineSP | |
-| ODAGEngineMP | |
 -->
