@@ -2,7 +2,7 @@
 
 A domain entry represents the set of words/connections that points from one domain to the next. You can refer to [DomainStorage components](../pages/ODAGComponents.md) in order to understand what is a domain storage and its internals (Domains and connections)
 
-## DomainStorage hierarchichy
+## DomainEntry hierarchichy
 
 <p align="center"> 
 <img src="../resources/ClassDiag/DomainEntry/DomainEntry_general.png" alt="ODAG storage class diagram">
