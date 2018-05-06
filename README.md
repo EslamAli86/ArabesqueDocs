@@ -20,4 +20,4 @@
 	+ [Get next embedding](./pages/GetNextEmbeddingSeqDiag.md)
 	+ [Read/Expand/Add](./pages/ReadExpandAddNewEmbeddingSeqDiag.md)
 
-+ [Configuration](./pages/config.md)
++ [Configuration](./pages/Configuration.md)
